@@ -1,3 +1,3 @@
 module github.com/svicknesh/tokenauthn
 
-go 1.26.6
+go 1.25.0

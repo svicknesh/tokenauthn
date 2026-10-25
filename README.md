@@ -10,6 +10,12 @@ You supply the master secret and a `Store` implementation; `tokenauthn` owns
 the cryptographic construction, the wire format, and the verification
 logic.
 
+## Requirements
+
+- **Minimum supported Go version: 1.25** (`go 1.25.0` in `go.mod`).
+- Standard library only; no third-party dependencies. The V1 MAC uses
+  `crypto/sha3`, which has been in the standard library since Go 1.24.
+
 ## What tokenauthn does
 
 - Issues opaque bearer tokens (`Mint`) backed by a random 128-bit token ID
@@ -434,3 +440,10 @@ func main() {
     }
 }
 ```
+
+## License
+
+Copyright 2026 Vicknesh Suppramaniam.
+
+`tokenauthn` is licensed under the Apache License, Version 2.0. See
+[`LICENSE`](LICENSE) for the full text.
